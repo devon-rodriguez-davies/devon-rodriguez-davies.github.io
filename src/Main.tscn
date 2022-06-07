@@ -1,12 +1,49 @@
-[gd_scene load_steps=2 format=2]
+[gd_scene load_steps=4 format=2]
 
 [ext_resource path="res://BaseImages/MapBackgrounds/cobblestone.png" type="Texture" id=1]
+[ext_resource path="res://BaseImages/TileBackgrounds/ReallyBasicTileSet.png" type="Texture" id=2]
+
+[sub_resource type="TileSet" id=1]
+0/name = "ReallyBasicTileSet.png 0"
+0/texture = ExtResource( 2 )
+0/tex_offset = Vector2( 0, 0 )
+0/modulate = Color( 1, 1, 1, 1 )
+0/region = Rect2( 0, 0, 128, 128 )
+0/tile_mode = 2
+0/autotile/icon_coordinate = Vector2( 0, 0 )
+0/autotile/tile_size = Vector2( 32, 32 )
+0/autotile/spacing = 0
+0/autotile/occluder_map = [  ]
+0/autotile/navpoly_map = [  ]
+0/autotile/priority_map = [  ]
+0/autotile/z_index_map = [  ]
+0/occluder_offset = Vector2( 0, 0 )
+0/navigation_offset = Vector2( 0, 0 )
+0/shape_offset = Vector2( 0, 0 )
+0/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+0/shape_one_way = false
+0/shape_one_way_margin = 0.0
+0/shapes = [  ]
+0/z_index = 0
 
 [node name="Main" type="Node2D"]
 
 [node name="Map" type="Node2D" parent="."]
 
 [node name="Tiles" type="Node2D" parent="Map"]
+position = Vector2( 20, 0 )
+z_index = 1
+
+[node name="TileMap" type="TileMap" parent="Map/Tiles"]
+scale = Vector2( 2, 2 )
+tile_set = SubResource( 1 )
+cell_size = Vector2( 32, 32 )
+cell_quadrant_size = 64
+format = 1
+tile_data = PoolIntArray( 0, 0, 65537, 1, 0, 131075, 2, 0, 131075, 3, 0, 131075, 4, 0, 131075, 5, 0, 65539, 65536, 0, 196608, 65537, 0, 196611, 65538, 0, 196611, 65539, 0, 196611, 65540, 0, 196611, 65541, 0, 196610, 131072, 0, 196608, 131073, 0, 196611, 131074, 0, 196611, 131075, 0, 196611, 131076, 0, 196611, 131077, 0, 196610, 196608, 0, 196608, 196609, 0, 196611, 196610, 0, 196611, 196611, 0, 196611, 196612, 0, 196611, 196613, 0, 196610, 262144, 0, 196608, 262145, 0, 196611, 262146, 0, 196611, 262147, 0, 196611, 262148, 0, 196611, 262149, 0, 196610, 327680, 0, 196608, 327681, 0, 196611, 327682, 0, 196611, 327683, 0, 196611, 327684, 0, 196611, 327685, 0, 196610, 393216, 0, 131072, 393217, 0, 196609, 393218, 0, 196609, 393219, 0, 196609, 393220, 0, 196609, 393221, 0, 65538 )
+__meta__ = {
+"_edit_lock_": true
+}
 
 [node name="cobblestone" type="Sprite" parent="Map"]
 position = Vector2( 397, 217 )
