@@ -34,8 +34,7 @@ const Table = ({ searchTerm }) => {
     const lowerSearchTerm = searchTerm.toLowerCase();
     const filteredDrivers = searchTerm ? Drivers.data.filter(driver => 
         driver.vehicleRegistration.toLowerCase().includes(lowerSearchTerm) ||
-        driver.forename.toLowerCase().includes(lowerSearchTerm) ||
-        driver.surname.toLowerCase().includes(lowerSearchTerm)
+        (driver.forename + " " + driver.surname).toLowerCase().includes(lowerSearchTerm)
     ) : Drivers.data;
 
     return filteredDrivers.length > 0 ? (
