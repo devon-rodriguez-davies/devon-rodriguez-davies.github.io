@@ -30,7 +30,8 @@ const Row = ({driver}) => {
     const daysActive = driver.traces.filter(trace => trace.activity).map(trace => 
         {
             const date = new Date(trace.date);
-            return date.getDay() - 1; //Monday is 0, Sunday is 6. -1 to match index later
+            var day = date.getDay(); //Monday is 1, Sunday is 0 for some reason!!!
+            return (day === 0) ? 6 : day - 1; // Changing it to Monday is 0 and Sunday is 6 for easier looping later
         });
 
     return (
