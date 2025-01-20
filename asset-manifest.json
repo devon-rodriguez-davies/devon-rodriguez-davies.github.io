@@ -1,14 +1,14 @@
 {
   "files": {
     "main.css": "/logistics-fullstack/static/css/main.ee5637e8.css",
-    "main.js": "/logistics-fullstack/static/js/main.18b652a4.js",
+    "main.js": "/logistics-fullstack/static/js/main.632723fc.js",
     "static/media/logo.png": "/logistics-fullstack/static/media/logo.51c60a49170feac13203.png",
     "index.html": "/logistics-fullstack/index.html",
     "main.ee5637e8.css.map": "/logistics-fullstack/static/css/main.ee5637e8.css.map",
-    "main.18b652a4.js.map": "/logistics-fullstack/static/js/main.18b652a4.js.map"
+    "main.632723fc.js.map": "/logistics-fullstack/static/js/main.632723fc.js.map"
   },
   "entrypoints": [
     "static/css/main.ee5637e8.css",
-    "static/js/main.18b652a4.js"
+    "static/js/main.632723fc.js"
   ]
 }
